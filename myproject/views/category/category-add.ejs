@@ -1,0 +1,101 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       <title>Admin</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+  </head>
+  <body class="app sidebar-mini rtl">
+    <!-- Navbar-->
+    <%- include('../themepart/header'); -%>
+    <!-- Sidebar menu-->
+    <%- include('../themepart/sidebar'); -%>
+    <!-- Sidebar menu-->
+    
+    <main class="app-content">
+      <div class="app-title">
+        <div>
+          <h1><i class="fa fa-edit"></i> Category Form</h1>
+          <p> </p>
+        </div>
+        <ul class="app-breadcrumb breadcrumb">
+          <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
+          <li class="breadcrumb-item">Forms</li>
+          <li class="breadcrumb-item"><a href="#">Category Forms</a></li>
+        </ul>
+      </div>
+      <div class="row">
+       
+        <div class="col-md-6">
+          <div class="tile">
+            <h3 class="tile-title">Category</h3>
+            <div class="tile-body">
+                <form class="form-horizontal" method="post" enctype="multipart/form-data" id="myform">
+               
+                    <div class="form-group row">
+                  <label class="control-label col-md-3">Name</label>
+                  <div class="col-md-8">
+                      <input class="form-control" type="text" name="category_name" placeholder="Enter Category Name" required>
+                  </div>
+                </div>
+
+                <div class="form-group row">
+                  <label class="control-label col-md-3">Image</label>
+                  <div class="col-md-8">
+                      <input class="form-control" type="file" name="file123" placeholder="Enter full name" required>
+                  </div>
+                </div>
+             
+              
+               
+                    
+                
+                    
+                  <div class="tile-footer">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-3">
+                    <button class="btn btn-primary" type="submit"><i class="fa fa-fw fa-lg fa-check-circle"></i>Save</button>&nbsp;&nbsp;&nbsp;<a class="btn btn-secondary" href="#"><i class="fa fa-fw fa-lg fa-times-circle"></i>Cancel</a>
+                </div>
+              </div>
+            </div>
+              </form>
+            </div>
+          
+          </div>
+        </div>
+        <div class="clearix"></div>
+      
+      </div>
+    </main>
+    <%- include('../themepart/footer'); -%>
+    <!-- Essential javascripts for application to work-->
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <!-- The javascript plugin to display page loading on top-->
+    <script src="../js/plugins/pace.min.js"></script>
+
+    <!-- Page specific javascripts-->
+    
+    <script src="../tools/validation/jquery.validate.js"></script>
+    <style>
+        .error{
+            color:red;
+        }
+    </style>
+    <script>
+    $(document).ready(function(){
+       $("#myform").validate();
+    });
+    </script>
+  </body>
+</html>
